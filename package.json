@@ -1,0 +1,33 @@
+{
+  "name": "vishwjeet-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishwjeet Ujgare",
+  "license": "ISC",
+  "description": "Vishwjeet Ujgare's simple portfolio website",
+  "keywords": [
+    "Vishwjeet Ujgare",
+    "portfolio",
+    "personal-website",
+    "web-development",
+    "projects",
+    "html",
+    "css",
+    "javascript",
+    "nodejs",
+    "express",
+    "ejs",
+    "backend",
+    "server",
+    "Vishwjeet",
+    "Ujgare"
+  ],
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
