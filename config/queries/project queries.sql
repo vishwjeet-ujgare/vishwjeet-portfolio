@@ -53,9 +53,26 @@
 		-- Alter table projects
 		-- drop column date_completed;
 
+-- Change default and not null values
 
+	-- 	Default 
+		-- alter table projects
+		-- alter column start_date
+		-- drop default;
+		
+	-- 	NOt NULL
+			-- alter table projects 
+			-- alter column start_date
+			-- drop NOT NULL;
 
+			-- ALTER TABLE projects 
+			-- ALTER COLUMN isactive 
+			-- SET DEFAULT false;
 
-
+-- Delete commands
+		-- delete from projects where id=4;
+		
+-- insert into projects(title,developers) values('Do to list item with react',ARRAY['vishwjeet ujgare','suhas','sfdsf fsdfsd']);
+delete from projects where id>4 and id<30;
 
 select * from projects

@@ -1,0 +1,108 @@
+<%- include("../partials/header.ejs") %>
+
+    <style>
+        form {
+
+            width: 70%;
+            margin: auto;
+            margin-top: 2%;
+        }
+
+        #tech-list-container{
+            margin-bottom: 2%;
+        }
+    </style>
+
+    <div>
+        <form method="post" id="projectManageForm" >
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="inputTitle">* Project Title</label>
+                    <input type="text" class="form-control" id="inputTitle" placeholder="Project Title" name="title" required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="inputStartDate">Start Date</label>
+                    <input type="date" class="form-control" id="dateStartDate" placeholder="Start date" name="startDate">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="inputEndDate">End Date</label>
+                    <input type="date" class="form-control" id="dateEndDate" placeholder="End date" name="endDate">
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <!-- Technology Stack Input and Button -->
+                <div class="form-group col-md-6">
+                    <label for="inputTech">Technologies Stack</label>
+
+                    <div id="tech-list-container">
+                       
+                    </div>
+                    <input type="text" class="form-control" id="inputTech" placeholder="Java, etc." name="TechnologyName">
+                </div>
+                <div class="form-group col-md-6 d-flex align-items-end">
+                    <button type="button" class="btn btn-primary btn-block" id="btnAddTech">Add Technology</button>
+                    <!-- Button now spans full width of col-md-6 -->
+                </div>
+            </div>
+
+            <div class="form-row">
+                <!-- Developers Input and Button -->
+                <div class="form-group col-md-6">
+                    <label for="inputDev">* Developers</label>
+                    <div id="dev-list-container">
+                       
+                    </div>
+                    <input type="text" class="form-control" id="inputDev" placeholder="Vishwjeet Ujgare" name="DeveloperName">
+                </div>
+                <div class="form-group col-md-6 d-flex align-items-end">
+                    <button type="button" class="btn btn-primary btn-block" id="btnAddDev">Add To Contributers</button>
+                    <!-- Button now spans full width of col-md-6 -->
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="textareaDesc">Project Description</label>
+                <textarea class="form-control" id="textareaDesc" rows="3" name="description"></textarea>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="inputGithubLink">GitHub Repository Link</label>
+                <input type="url" class="form-control" id="inputGithubLink"
+                    placeholder="https://github.com/username/repository" name="githubURL">
+            </div>
+
+            <div class="form-group">
+                <label for="inputLiveProjectLink">Live Project Link</label>
+                <input type="url" class="form-control" id="inputLiveProjectLink" placeholder="https://yourproject.com" name="liveProjectLink">
+            </div>
+
+
+
+            <div class="form-group row ">
+                <div class="col-12 col-md-4 mb-2">
+                    <button type="button" class="btn btn-success btn-block">SAVE CHANGES</button>
+                </div>
+                <div class="col-12 col-md-4 mb-2">
+                    <button type="submit" id="addBtn" class="btn btn-primary btn-block" onclick="setFormAction('/manage-projects/new')";>ADD / UPDATE PROJECT</button>
+                </div>
+                <div class="col-12 col-md-4 mb-2">
+                    <button type="submit" class="btn btn-danger btn-block">DELETE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="/scripts/projects/manage-project-script.js" defer></script>
+
+    <%- include("../partials/footer.ejs") %>

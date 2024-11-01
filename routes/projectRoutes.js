@@ -3,6 +3,10 @@ import { fetchProjects } from '../controllers/projectController.js'
 
 const router = express.Router();
 
-router.get('/project', fetchProjects);
+
+router.get('/', fetchProjects);
+
+
+
 
 export default router;

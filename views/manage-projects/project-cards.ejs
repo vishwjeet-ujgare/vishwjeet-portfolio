@@ -1,0 +1,73 @@
+<%- include("../partials/header.ejs")%>
+
+    <h1>My Projects</h1>
+    <div>
+
+       <% if(allProjectDetails.total_projects >0){%>
+
+            <% allProjectDetails.project_cards.forEach(card_data=>{%>
+                <div class="card" style="width: 21rem;">
+                    <img class="card-img-top" src="img\pro1.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= card_data.project_title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= card_data.desc %>
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+        
+                        <li class="list-group-item">Technologies:<% if(card_data.tech_details.total_techs>3){%>
+                                <% for(var i=0;i<3;i++){%>
+                                    <%= card_data.tech_details.techs[i] %>,
+                                        <% }%>
+                                            ...
+                                            <%} else if(card_data.tech_details.total_techs !=0) {%>
+                                                <% card_data.tech_details.techs.forEach((tech)=>{%>
+                                                    <%=tech%>,
+                                                        <% });%>
+                                                            <% } else { %>
+                                                                -
+                                                                <%}%>
+                        </li>
+        
+                        <li class="list-group-item">Developed By :
+                            <% if(card_data.developed_by.total_devs>=2){%>
+                                <% for(var i=0;i<2;i++){%>
+                                    <%= card_data.developed_by.dev_names[i]%>,
+                                        <% }%>
+                                            ...
+                                            <%}else if(card_data.developed_by.total_devs!=0
+                                                &&card_data.developed_by.total_devs<2 ){%>
+                                                <%= card_data.developed_by.dev_names[0]%>
+                                                    <%}else{%>
+                                                        -
+                                                        <% }%>
+        
+        
+                        </li>
+                     
+                        <li class="list-group-item">
+                            <strong>Timeline:</strong>
+                            <%= card_data.start_date %>
+                                <% if (card_data.isActive) { %>
+                                    : Active
+                                    <% } else { %>
+                                        : <%= card_data.end_date %>
+                                            <% } %>
+                        </li>
+        
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Project link</a>
+                        <a href="#" class="card-link">More about project</a>
+                    </div>
+                </div>
+          <%  });%>
+
+        <%}else{%>
+            <p><strong>Project yet to be added.</strong></p>
+        <%}%>
+    </div>
+    <%- include("../partials/footer.ejs")%>

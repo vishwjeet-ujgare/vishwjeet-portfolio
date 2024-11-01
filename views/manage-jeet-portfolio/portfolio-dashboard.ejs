@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') %>
+<style>
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 2%;
+    }
+</style>
+
+<p>Manage Portfolio</p>
+
+<div class="btn-container">
+    <!-- Bootstrap-styled anchor tags as buttons -->
+    <a href="/manage-projects" class="btn btn-outline-primary btn-block" style="width: 60%;">Project</a>
+    <a href="/manage-about" class="btn btn-outline-primary btn-block" style="width: 60%;">About</a>
+    <a href="/manage-contact" class="btn btn-outline-primary btn-block" style="width: 60%;">Contacts</a>
+    <a href="/manage-education" class="btn btn-outline-primary btn-block" style="width: 60%;">Education</a>
+</div>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,16 +1,18 @@
 import express from "express";
-import  {fetchProjects} from "./controllers/projectController.js";
+import bodyParser from 'body-parser';
+// import { fetchProjects, addProject } from "./controllers/projectController.js";
+import projectRoutes from "./routes/projectRoutes.js"
+import manageProjectRoutes from "./routes/manageProjectRoutes.js"
 // import {dirname} from "path"
 // import { fileURLToPath } from "url" 
-
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-
 
 const app = express();
 const PORT = 3000;
 
+app.use(bodyParser.json()); // Add this line to parse JSON data
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
 
 app.get("/", (req, res) => {
     res.render("index.ejs", { message: "Hello" });
@@ -26,7 +28,20 @@ app.get("/contact", (req, res) => {
 });
 
 
-app.use("/projects",fetchProjects);
+app.get("/manage-jeet-portfolio", (req, res) => {
+    res.render("manage-jeet-portfolio/portfolio-dashboard.ejs");
+});
+
+
+// Publicly accessible project routes
+app.use("/projects", projectRoutes);
+
+// Restricted management routes
+app.use("/manage-projects", manageProjectRoutes);
+
+
+
+// app.use("/manage-projects", project);
 
 
 app.listen(3000, () => {
