@@ -32,6 +32,9 @@ app.get("/manage-jeet-portfolio", (req, res) => {
     res.render("manage-jeet-portfolio/portfolio-dashboard.ejs");
 });
 
+app.get("/education",(req,res)=>{
+    res.render('education/education-home-page.ejs')
+})
 
 // Publicly accessible project routes
 app.use("/projects", projectRoutes);

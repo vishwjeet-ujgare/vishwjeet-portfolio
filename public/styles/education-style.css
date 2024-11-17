@@ -1,0 +1,250 @@
+.education-home-body {
+    height: 100%;
+    /* background-color: #F3F3E0; */
+
+    background-color: #CBDCEB;
+    padding: 1.5rem;
+    font-family: "Roboto", serif;
+
+}
+
+.edu-img-ht-container {
+
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+#edu-ht-images {
+    /* background-color: aqua; */
+
+}
+
+.edu-ht {
+    /* background-color: yellow; */
+    text-align: center;
+}
+
+.edu-heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+#edu-title {
+    font-size: 1.7rem;
+    font-weight: 300;
+
+}
+
+.ht-images {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+}
+
+
+/* education section */
+
+.section-heading {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.education-section {
+    /* background-color: #F3F3E0; */
+    /* background-color: #F3F3E0; */
+    background-color: #62aaea;
+    display: flex;
+
+
+
+
+}
+
+.section-container {
+    border-radius: 15px;
+    padding: 1%;
+    border: 2px groove gray;
+    margin: 3% 6%;
+}
+
+
+.section-heading>h2 {
+    text-align: center;
+
+}
+
+.institution-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #F4F4F4;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px
+}
+
+.institution-img {
+    width: 8rem;
+    border-radius: 50%;
+}
+
+
+
+.date-range {
+    margin-top: 10px;
+}
+
+.program-info {
+    background-color: #F4F4F4;
+    border-radius: 15px;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+.program-details {
+    background-color: #81f1f7;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.program-title {
+    font-weight: 500;
+    font-family: "Headland One", serif;
+    font-size: 1.2rem;
+    margin: 0%;
+}
+
+.university-name {
+    font-weight: 600;
+    margin: 0%;
+    margin-top: 5px;
+
+}
+
+.campus-info {
+
+    padding: 15px;
+}
+
+.campus-name {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.campus-name>a {
+    color: blue;
+}
+
+.campus-name>a:hover {
+    font-size: 1rem;
+}
+
+.program-description {
+    text-align: justify;
+
+}
+
+.program-description>p {
+    margin-bottom: 0px;
+
+}
+
+
+
+
+/* Certification style */
+
+.training-certificates-section {
+    height: auto;
+}
+
+.tc-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    align-items: stretch;
+
+}
+
+.c-grid-item {
+    /* border: 2px solid grey; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    /* min-height: 250px;  */
+}
+
+
+
+
+.certificate-institute-logo-container {
+    background-color: #8ec7f9;
+    height: 55%;
+    margin: 0%;
+    padding: 15px 0px;
+    border-radius: 15px 15px 0px 0px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.certificate-institute-logo-container>img {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+
+.certificate-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.certificate-title {
+    font-family: "Headland One", serif;
+    font-size: larger;
+}
+
+@media screen and (max-width:750px) {
+    .edu-img-ht-container {
+        flex-direction: column;
+
+    }
+
+    .edu-ht {
+        /* background-color: yellow; */
+        margin-top: 1.5%;
+    }
+
+
+    .section-heading {
+        margin-top: 10%;
+    }
+
+    .education-section {
+
+        flex-direction: column;
+    }
+
+
+    #institution-img {
+        width: 8rem;
+
+    }
+}
