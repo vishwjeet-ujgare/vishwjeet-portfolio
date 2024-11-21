@@ -1,0 +1,18 @@
+
+.project-section-heading {
+    text-align: center;
+}
+
+.project-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    flex:auto;
+}

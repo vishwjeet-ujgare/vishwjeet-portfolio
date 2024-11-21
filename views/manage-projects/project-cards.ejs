@@ -1,9 +1,12 @@
 <%- include("../partials/header.ejs")%>
 
-    <h1>My Projects</h1>
-    <div>
 
-       <% if(allProjectDetails.total_projects >0){%>
+
+    <h1 class="project-section-heading">My Projects</h1>
+
+    <div class="project-content-section">
+
+        <% if(allProjectDetails.total_projects>0){%>
 
             <% allProjectDetails.project_cards.forEach(card_data=>{%>
                 <div class="card" style="width: 21rem;">
@@ -17,7 +20,7 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush">
-        
+
                         <li class="list-group-item">Technologies:<% if(card_data.tech_details.total_techs>3){%>
                                 <% for(var i=0;i<3;i++){%>
                                     <%= card_data.tech_details.techs[i] %>,
@@ -31,7 +34,7 @@
                                                                 -
                                                                 <%}%>
                         </li>
-        
+
                         <li class="list-group-item">Developed By :
                             <% if(card_data.developed_by.total_devs>=2){%>
                                 <% for(var i=0;i<2;i++){%>
@@ -44,10 +47,10 @@
                                                     <%}else{%>
                                                         -
                                                         <% }%>
-        
-        
+
+
                         </li>
-                     
+
                         <li class="list-group-item">
                             <strong>Timeline:</strong>
                             <%= card_data.start_date %>
@@ -57,17 +60,19 @@
                                         : <%= card_data.end_date %>
                                             <% } %>
                         </li>
-        
+
                     </ul>
                     <div class="card-body">
                         <a href="#" class="card-link">Project link</a>
                         <a href="#" class="card-link">More about project</a>
                     </div>
                 </div>
-          <%  });%>
+                <% });%>
 
-        <%}else{%>
-            <p><strong>Project yet to be added.</strong></p>
-        <%}%>
+                    <%}else{%>
+                        <p><strong>Project yet to be added.</strong></p>
+                        <%}%>
     </div>
+
+   
     <%- include("../partials/footer.ejs")%>
